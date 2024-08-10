@@ -1,0 +1,61 @@
+.topview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
+}
+
+.view {
+  flex: 33.33%;
+  padding: 100px;
+  color: white;
+}
+.view a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 400;
+}
+.grp {
+  background-color: #060a2b;
+  size: 200px;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.text-box {
+  background-color: #4d84e2;
+  color: #060A2B;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.text-box:hover {
+  transform: scale(1.05);
+}
+
+.text-box h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.text-box p {
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+  color: white;
+}

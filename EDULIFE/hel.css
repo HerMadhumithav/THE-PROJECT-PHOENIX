@@ -1,0 +1,17 @@
+.hel{
+    text-align: center;
+    justify-content: center;
+    background-color:#060A2B ;
+    color: #4194ec ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.conhel{
+    font-size: 25px;
+    padding: 15px;
+}
+.conhel img{
+    margin-left: 25%;
+    text-align: center;
+    justify-content: center;
+}

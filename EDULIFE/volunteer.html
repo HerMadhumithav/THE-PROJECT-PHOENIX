@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Planner Authentication</title>
+    <link rel="stylesheet" href="volunteer.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container" id="login-form">
+        <h2>Login</h2>
+        <form id="login">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" required />
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" required />
+          <button type="submit">Login</button>
+          <p>
+            <a href="#" onclick="showForm('forgot-password-form')"
+              >Forgot Password?</a
+            >
+          </p>
+          <p>
+            Don't have an account?
+            <a href="#" onclick="showForm('signup-form')">Sign Up</a>
+          </p>
+        </form>
+      </div>
+
+      <div class="form-container" id="signup-form" style="display: none">
+        <h2>Sign Up</h2>
+        <form id="signup">
+          <label for="signup-name">Name:</label>
+          <input type="text" id="signup-name" required />
+          <label for="signup-email">Email:</label>
+          <input type="email" id="signup-email" required />
+          <label for="signup-password">Password:</label>
+          <input type="password" id="signup-password" required />
+          <button type="submit">Sign Up</button>
+          <p>
+            Already have an account?
+            <a href="#" onclick="showForm('login-form')">Login</a>
+          </p>
+        </form>
+      </div>
+
+      <div
+        class="form-container"
+        id="forgot-password-form"
+        style="display: none"
+      >
+        <h2>Forgot Password</h2>
+        <form id="forgot-password">
+          <label for="forgot-email">Email:</label>
+          <input type="email" id="forgot-email" required />
+          <button type="submit">Reset Password</button>
+          <p>
+            Remember your password?
+            <a href="#" onclick="showForm('login-form')">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="volunteer.js"></script>
+  </body>
+</html>

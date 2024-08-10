@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDULIFE</title>
+    <link rel="stylesheet" type="image/x-icon" href="./favicon.png">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="FOOTER.CSS">
+    <script src="https://kit.fontawesome.com/b7db067546.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <img src="logo.png" alt="Logo" />
+            <a href="#">EDULIFE</a>
+          </div>
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+                <i class="fa-light fa-xmark"></i>
+            </div>
+            <li><a href="land.html">Home</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Notification</a></li>
+            <li><a href="Abt.html">About us</a></li>
+            <li><a href="Help.html">Help</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </div>
+    </nav>
+    <div class="slide-container">
+      <div class="mySlides fade">
+        <img src="success.jfif" style="width: 100%;">
+      </div>
+      <div class="mySlides fade">
+        <img src="trust.jfif" style="width: 100%;">
+      </div>
+      <div class="mySlides fade">
+        <img src="volunteers.jfif" style="width: 100%;">
+      </div>
+    </div>
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+    <div class="container">
+      <div class="text-box" onclick="navigateTo('course.html')">
+          <h3>Courses</h3>
+          <p>Explore the world of coding and innovation using C++, Python and Java with limited possibilities of AI and ML. Elevate your skills and shape your future..</p>
+      </div>
+      <div class="text-box" onclick="navigateTo('guide.html')">
+          <h3>Guide</h3>
+          <p>Chart your path to success with our comprehensive career guide. Whether you're just starting out or looking to advance, we provide the tools and insights you need. Let us help you navigate your journey to a fulfilling career.</p>
+      </div>
+      <div class="text-box" onclick="navigateTo('scholarship.html')">
+          <h3>Scholarships</h3>
+          <p>Unlock your potential with scholarships designed to make your dreams a reality. Don’t let financial barriers hold you back—invest in your education. Your future is worth it, and the opportunity is here!</p>
+      </div>
+      <div class="text-box" onclick="navigateTo('clock.html')">
+          <h3>Emotional Support</h3>
+          <p>Your emotional well-being is the foundation of a healthy life. Embrace the support you need to manage stress, build resilience, and find balance. Because taking care of your mind is just as important as your studies</p>
+      </div>
+  </div>
+
+    <footer class="footer">
+      <div class="container row">
+          <div class="footer-col">
+              <div class="photo">
+                 <img src="logo.png.png">
+              </div>
+          </div>
+          <div class="footer-col">
+              <h4>CONTACT</h4>
+              <ul>
+                  <li><a href="#">Phone</a></li></br>
+                  <li><a href="#">Whatsapp</a></li></br>
+                  <li><a href="#">Instagram</a></li></br>
+                  <li><a href="#">Twitter</a></li></br>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>ABOUT US</h4>
+              <ul>
+                  <li><a href="course.html">Course</a></li></br>
+                  <li><a href="Scholarship.html">Scholarship</a></li></br>
+                  <li><a href="clock.html">Emotional support</a></li></br>
+                  <li><a href="guide.html">Guide</a></li></br>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>SUPPORTS</h4>
+              <ul>
+                  <li><a href="#">Agaram Foundation</a></li></br>
+                  <li><a href="#">Lawrence Charitable Trust</a></li></br>
+                  <li><a href="#">Naan Mudhalvan</a></li></br>
+              </ul>
+          </div>
+          <div class="footer-col" style="margin-left: 15px;">
+              <h4>SHARE YOUR EXPERIENCE</h4>
+              <a href="mailto:theprojectphoenix1023@gmail.com">theprojectphoenix1023@gmail.com</a>
+          </div>
+      </div>
+  </footer>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+      function navigateTo(page) {
+        window.location.href = page;
+    }
+    
+      </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break Timer</title>
+    <link rel="stylesheet" href="clock.css" />
+    <link rel="stylesheet" href="FOOTER.CSS">
+    <script src="https://kit.fontawesome.com/b7db067546.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="main-heading">Emotional Support</h1>
+    </div>
+
+    <div class="content">
+      <div class="intro">
+        <p>
+          Taking regular breaks while studying is crucial for maintaining
+          emotional well-being and preventing burnout. Students often find
+          themselves overwhelmed by the pressure to excel, but it's important to
+          remember that stepping away from the books can actually enhance
+          productivity and creativity. Engaging in activities like reading a
+          favorite book, practicing writing or journaling, or even participating
+          in yoga exercises can offer a refreshing mental reset. These
+          activities not only provide a much-needed break but also help in
+          reducing stress and boredom. By incorporating these breaks into their
+          study routine, students can rejuvenate their minds, improve focus, and
+          ultimately achieve a better balance between their academic goals and
+          personal well-being.
+        </p>
+        <div class="timer-container">
+          <div class="timer">
+            <div class="countdown">00:00</div>
+            <div class="controls">
+              <input type="number" id="minutes" placeholder="Min" />
+              <input type="number" id="seconds" placeholder="Sec" />
+              <button id="start">Start</button>
+              <button id="reset">Reset</button>
+            </div>
+            <div class="status"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="segment">
+        <img src="yoga.jpg" alt="Yoga Image" />
+        <p>
+          For students who are continuously studying, integrating yoga and
+          exercises into their routine can be a game-changer. These activities
+          are known to alleviate stress, reduce tension, and combat feelings of
+          depression that can build up during long study sessions. Practicing
+          yoga helps in centering the mind, improving concentration, and
+          promoting relaxation, while physical exercises release endorphins, the
+          body’s natural mood enhancers. A few minutes of stretching or a quick
+          workout during breaks can reinvigorate both the mind and body, making
+          it easier to return to studying with a refreshed perspective.
+          <a
+            href="https://www.youtube.com/watch?v=rlGGFaBy3XI"
+            class="read-more"
+            >Read more</a
+          >
+        </p>
+      </div>
+
+      <div class="segment">
+        <img src="games.jpg" alt="Games Image" />
+        <p>
+          Mind-relaxing games offer a fun and effective way to unwind during
+          study breaks. Engaging in puzzles, strategy games, or light-hearted
+          digital games can provide a much-needed mental escape from the
+          pressures of academic work. These games challenge the brain in
+          different ways, enhancing cognitive function and problem-solving
+          skills while simultaneously relieving stress. By incorporating short
+          gaming sessions into their breaks, students can break the monotony of
+          studying and return to their tasks with improved focus and a more
+          positive mindset.
+          <a
+            href="https://www.yourtherapysource.com/blog1/2023/04/01/stress-relief-games-for-students/"
+            class="read-more"
+            >Read more</a
+          >
+        </p>
+      </div>
+
+      <div class="segment">
+        <img src="hobby.jpg" alt="Hobbies Image" />
+        <p>
+          Pursuing individual hobbies during study breaks is another excellent
+          way for students to recharge. Whether it’s painting, playing a musical
+          instrument, writing, or crafting, hobbies allow students to express
+          themselves creatively and disconnect from the demands of their
+          studies. Engaging in a favorite pastime can bring a sense of joy and
+          accomplishment, providing a fulfilling and relaxing break. By
+          dedicating time to their hobbies, students can maintain a healthy
+          balance between their academic responsibilities and personal
+          interests, ultimately supporting their overall well-being and
+          long-term success.
+          <a
+            href="https://amberstudent.com/blog/post/fun-hobbies-for-students#11-dancingnbsp"
+            class="read-more"
+            >Read more</a
+          >
+        </p>
+      </div>
+    </div>
+    <audio
+      id="break-sound"
+      src="kitchen-timer-33043.mp3"
+      preload="auto"
+    ></audio>
+    <footer class="footer">
+      <div class="container row">
+          <div class="footer-col">
+              <div class="photo">
+                 <img src="logo.png.png">
+              </div>
+          </div>
+          <div class="footer-col">
+              <h4>CONTACT</h4>
+              <ul>
+                  <li><a href="#">Phone</a></li></br>
+                  <li><a href="#">Whatsapp</a></li></br>
+                  <li><a href="#">Instagram</a></li></br>
+                  <li><a href="#">Twitter</a></li></br>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>ABOUT US</h4>
+              <ul>
+                  <li><a href="course.html">Course</a></li></br>
+                  <li><a href="Scholarship.html">Scholarship</a></li></br>
+                  <li><a href="clock.html">Emotional support</a></li></br>
+                  <li><a href="guide.html">Guide</a></li></br>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>SUPPORTS</h4>
+              <ul>
+                  <li><a href="#">Agaram Foundation</a></li></br>
+                  <li><a href="#">Lawrence Charitable Trust</a></li></br>
+                  <li><a href="#">Naan Mudhalvan</a></li></br>
+              </ul>
+          </div>
+          <div class="footer-col" style="margin-left: 15px;">
+              <h4>SHARE YOUR EXPERIENCE</h4>
+              <a href="mail">theprojectphoenix1023@gmail.com</a>
+          </div>
+      </div>
+  </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+  </body>
+  <script src="clock.js"></script>
+</html>

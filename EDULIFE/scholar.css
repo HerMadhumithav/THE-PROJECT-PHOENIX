@@ -1,0 +1,168 @@
+/* Basic Reset */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 10px; /* Reduced padding */
+}
+
+.title {
+  text-align: center;
+  justify-content: center;
+  background-color: #060a2b;
+  color: #4194ec;
+  padding-top: 10px; /* Reduced bottom margin */
+}
+
+.title h1 {
+  font-size: 1.75em; /* Adjusted font size */
+  margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+.title p {
+  font-size: 0.9em; /* Adjusted font size */
+  margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+.ps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reduced space between entries */
+}
+
+.ps .entry {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px; /* Reduced space between image and text */
+  margin-bottom: 10px; /* Reduced bottom margin */
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px; /* Reduced padding */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.ps .entry img {
+  width: 380px; /* Adjusted image size */
+  height: auto;
+  object-fit: cover;
+  margin-right: 0; /* Ensure no extra margin on the right */
+}
+
+.ps .entry .text {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 200px); /* Adjust to prevent overflow */
+}
+
+.ps .entry h1 {
+  font-size: 1.4em; /* Adjusted font size */
+  margin-bottom: 5px;
+  color: #4d84e2;
+}
+
+.ps .entry h2 {
+  font-size: 1.1em; /* Adjusted font size */
+  margin-bottom: 5px;
+}
+
+.ps .entry p {
+  font-size: 0.9em; /* Adjusted font size */
+}
+
+.ps .entry a {
+  color: #060a2b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9em; /* Adjusted font size */
+}
+
+.ps .entry a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 15px; /* Reduced padding */
+  text-align: center;
+}
+
+.footer-col {
+  margin: 5px 0; /* Reduced margin */
+}
+
+.footer-col h4 {
+  margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 5px; /* Reduced bottom margin */
+}
+
+.footer-col a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9em; /* Adjusted font size */
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ps .entry {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ps .entry img {
+    width: 100%; /* Make image full width on smaller screens */
+    margin-right: 0; /* Ensure no extra margin on the right */
+  }
+
+  .ps .entry .text {
+    max-width: 100%; /* Allow text to use full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 1.3em; /* Adjusted font size */
+  }
+
+  .title p {
+    font-size: 0.8em; /* Adjusted font size */
+  }
+
+  .ps .entry h1 {
+    font-size: 1em; /* Adjusted font size */
+  }
+
+  .ps .entry h2 {
+    font-size: 0.9em; /* Adjusted font size */
+  }
+
+  .ps .entry p {
+    font-size: 0.8em; /* Adjusted font size */
+  }
+
+  .footer-col a {
+    font-size: 0.8em; /* Adjusted font size */
+  }
+}

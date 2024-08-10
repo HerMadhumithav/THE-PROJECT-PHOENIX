@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #e0f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    padding: 20px;
+    background: #4d84e2; /* Blue background for the heading */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff; /* White text for the heading */
+    margin: 0;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #000000;
+    flex: 2;
+    margin-right: 20px;
+}
+
+.timer-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.countdown {
+    font-size: 48px;
+    margin: 20px 0;
+    animation: pulse 1s infinite;
+    color: #4d84e2; /* Blue for the countdown text */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: #4d84e2;
+    }
+    50% {
+        transform: scale(1.1);
+        color: #004d40; /* Darker green for pulse */
+    }
+    100% {
+        transform: scale(1);
+        color: #4d84e2;
+    }
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 80px;
+    background-color: #ffffff;
+    color: #4d84e2; /* Blue text for input */
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #4d84e2; /* Blue background for buttons */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s ease-in-out;
+    margin-right: 10px;
+}
+
+button:hover {
+    background: #ffffff; /* White background on hover */
+    color: #4d84e2; /* Blue text on hover */
+    border: 2px solid #4d84e2; /* Blue border on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.status {
+    font-size: 16px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.segment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.segment img {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.segment p {
+    font-size: 16px;
+    color: #004d40;
+    flex: 1;
+}
+
+.read-more {
+    display: block;
+    margin-top: 10px;
+    color: #4d84e2; /* Blue color for Read more links */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #004d40; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .intro p {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .timer-container {
+        justify-content: flex-start;
+    }
+
+    .segment {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .segment img {
+        margin-bottom: 10px;
+    }
+}

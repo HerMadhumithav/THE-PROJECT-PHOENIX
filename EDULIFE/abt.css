@@ -1,0 +1,30 @@
+.abt{
+    text-align: center;
+    justify-content: center;
+    background-color:#060A2B ;
+    color: #4194ec ;
+    padding-top: 10px;
+}
+.abt1{
+display: flex;
+}
+.abt1 ul{
+    font-size: 20px;
+    font-weight: 200;
+}
+.abt1 img{
+    height: 10cm;
+    width: 30cm;
+}
+.abt1 li{
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.last{
+    padding: 15px;
+}
+.last h3{
+    font-size: 20px;
+}

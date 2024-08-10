@@ -1,0 +1,238 @@
+.content {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 30px;
+  }
+  .navbar {
+    background-color: #060A2B;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+  }
+  .navbar.sticky {
+    background: #35486d;
+    padding: 10px 0;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+  .navbar .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar .logo a {
+    color: #4194ec;
+    font-size: 28px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-left: 10px;
+    text-shadow: 4px 4px #000;
+  }
+  
+  .navbar .logo img {
+    border-radius: 50%;
+    width: 40px;
+    position: relative;
+    bottom: 5px;
+    box-shadow: 2px 2px #000;
+  }
+  .navbar .menu-list {
+    display: inline-flex;
+  }
+  .menu-list li {
+    list-style: none;
+  }
+  .menu-list li a {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .menu-list li a:hover {
+    color: #4194ec;
+    text-shadow: 3px 3px #000;
+  }
+  .icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  .menu-list .cancel-btn {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
+  @media (max-width: 1230px) {
+    .content {
+      padding: 0 30px;
+    }
+    .left-side h2 {
+      font-size: 35px;
+    }
+    .left-side #typing-text {
+      font-size: 30px;
+    }
+    .navbar .logo a {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 1100px) {
+    .content {
+      padding: 0 30px;
+    }
+    .left-side h2 {
+      font-size: 32px;
+    }
+    .left-side #typing-text {
+      font-size: 27px;
+    }
+    .navbar .logo a {
+      font-size: 27px;
+    }
+    .left-side p {
+      font-size: 24px;
+    }
+    .left-side .btn {
+      font-size: 1.3rem;
+    }
+  }
+  @media (max-width: 900px) {
+    .content {
+      padding: 0 30px;
+    }
+    .left-side h2 {
+      font-size: 28px;
+    }
+    .left-side #typing-text {
+      font-size: 23px;
+    }
+    .navbar .logo a {
+      font-size: 25px;
+    }
+    .left-side p {
+      font-size: 21px;
+    }
+    .left-side .btn {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 868px) {
+    body.disabled {
+      overflow: hidden;
+    }
+    .icon {
+      display: block;
+      padding-top: 20px;
+    }
+    .icon.hide {
+      display: none;
+    }
+    .navbar .menu-list {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 400px;
+      left: -100%;
+      top: 0px;
+      display: block;
+      padding: 40px 0;
+      text-align: end;
+      background: #24262b;
+      transition: all 1.5s ease;
+    }
+    .navbar.show .menu-list {
+      left: 0%;
+    }
+    .navbar .menu-list li:nth-child(2) {
+      margin-top: 60px;
+      margin-right: 10px;
+      border-right: 5px solid #f75842;
+      padding-right: 5px;
+    }
+    .navbar .menu-list li:nth-child(3) {
+      margin-top: 30px;
+      margin-right: 40px;
+      transition: 1s;
+      border-right: 5px solid #f75842;
+      padding-right: 5px;
+    }
+    .navbar .menu-list li:nth-child(4) {
+      margin-top: 30px;
+      transition: 1.5s;
+      margin-right: 80px;
+      border-right: 5px solid #f75842;
+      padding-right: 5px;
+    }
+    .navbar .menu-list li:nth-child(5) {
+      margin-top: 30px;
+      transition: 2s;
+      margin-right: 150px;
+      border-right: 5px solid #f75842;
+      padding-right: 5px;
+    }
+    .navbar .menu-list li:nth-child(6) {
+      margin-top: 30px;
+      margin-right: 220px;
+      transition: 2.5s;
+      border-right: 5px solid #f75842;
+      padding-right: 5px;
+    }
+    .navbar .menu-list li a {
+      font-size: 23px;
+      margin-left: -100%;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .navbar.show .menu-list li a {
+      margin-left: 0px;
+    }
+    .left-side {
+      padding-top: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .left-side h2 {
+      font-size: 25px;
+    }
+    .left-side #typing-text {
+      font-size: 20px;
+    }
+    .navbar .logo a {
+      font-size: 22px;
+      text-shadow: 2px 2px #000;
+    }
+    .left-side p {
+      font-size: 16px;
+    }
+    .left-side .btn {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  @media (max-width: 380px) {
+    .navbar .logo a {
+      font-size: 17px;
+    }
+    .left-side {
+      padding-top: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .left-side h2 {
+      font-size: 20px;
+    }
+    .left-side #typing-text {
+      font-size: 15px;
+    }
+    .left-side p {
+      font-size: 13px;
+    }
+    .left-side .btn {
+      font-size: 0.7rem;
+      padding: 0.5rem 1rem;
+    }
+}

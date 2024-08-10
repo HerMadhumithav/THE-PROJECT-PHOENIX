@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.head{
+    padding: 20px;
+    font-size: 20px;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+.container .course-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+.container .course-card:hover{
+    height: 400px;
+}
+.container .course-card .img-card{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.container .course-card:hover .img-card{
+    top: -100px;
+    scale: 0.7s;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+.container .course-card .img-card img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container .course-card .custom-card{
+    position: relative;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.container .course-card:hover .custom-card{
+    top: 130px;
+    height: 250px;
+    overflow: auto;
+}
+.container .course-card .custom-card h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0072ee;
+}
+.container .course-card .custom-card p{
+    color: #333;
+}
+.container .course-card .custom-card a{
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: #181818;
+    color: #fff;
+    font-weight: 500;
+}
+.container .course-card .custom-card a:hover{
+    opacity: 0.8;
+}
+@media (max-width:480px) {
+    .container .course-card{
+        width: 230px;
+        border-radius: 15px;
+    }
+    .container .course-card .img-card{
+        width: 185px;
+        border-radius: 10px;
+    }
+    .container .course-card .custom-card p{
+        font-size: 0.8rem;
+    }
+    .container .course-card .custom-card a{
+        font-size: 0.9rem;
+    }
+}

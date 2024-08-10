@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+ 
+}
+
+.one {
+  background: #fff;
+  overflow: hidden;
+}
+
+.animated-text {
+  display: inline-block;
+  font-size: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  animation: typing 3.5s steps(22), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 22ch;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.one-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px; /* Adjust spacing between elements */
+}
+
+.one-content p {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgb(0, 0, 0);
+  text-align: justify;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.one-content img {
+  width: 100%;
+  max-width: 60vh; /* Ensure image scales properly */
+  margin-top: 1px;
+  margin-left: 50px;
+}
+
+.one h1 {
+  color: #0072ee;
+  font-size: 30px;
+  margin: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  padding: 20px;
+}
+
+.table-container {
+  background: #fff;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 2px solid #007bff;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #e3f2fd;
+}
+
+tr:nth-child(odd) {
+  background-color: #f0f4f8;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+}
